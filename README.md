@@ -1,5 +1,9 @@
 Minecraft Auto Clicker
-
+# Changes By Me:
+changed delay to be random (between 0 and 2 seconds)
+the delay entry box now does nothing
+very hastly put together.
+# Normal ReadME
 * Be sure to go into options.txt in your .minecraft folder and set "pauseOnLostFocus" to "false"
 * Must be done with Minecraft closed
 
