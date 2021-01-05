@@ -27,9 +27,13 @@ namespace AutoClicker
         {
             Click();
         }
-
+        Random rand = new Random();
         public void Start(int delay)
         {
+            //generate random int
+            
+           
+            
             Stop();
             hold = (delay == 0);
 
@@ -39,8 +43,10 @@ namespace AutoClicker
             else
             {
                 Click();
+      
                 timer.Interval = delay;
                 timer.Start();
+                
             }
         }
 
@@ -56,6 +62,9 @@ namespace AutoClicker
         {
             Win32Api.PostMessage(minecraftHandle, buttonDownCode, IntPtr.Zero, IntPtr.Zero);
             Win32Api.PostMessage(minecraftHandle, buttonUpCode, IntPtr.Zero, IntPtr.Zero);
+            int delay = rand.Next(1, 2000);
+            timer.Interval = delay;
+            Console.WriteLine("Random Number = " + delay);
         }
 
         #region Dispose
